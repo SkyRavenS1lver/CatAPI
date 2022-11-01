@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.pertemuan8api.api.RandomActivity;
-
 import java.util.ArrayList;
 
 import retrofit2.Call;
