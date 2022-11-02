@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         counter = findViewById(R.id.Counter);
         button1 = findViewById(R.id.button1);
 
-        //Recyclerview
         recyclerview = findViewById(R.id.recyclerview);
         catAdapter = new CatAdapter(this, catArrayList);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
@@ -49,14 +48,12 @@ public class MainActivity extends AppCompatActivity {
                 if (no == 5){
                     counter.setText(no+" Anda Suka sekali Dengan Kucing Ya");
                 }
-                counter.setText(no+"");
+                else{counter.setText(no+"");}
             }
 
         });
     }
 
-    //get random data ini sudah secara otomatis request data di background
-    // kalau mau secara manual jalan di bg, maka harus menggunakan equator
 
     private void getCatImage(CatAdapter CatAdapter){
         Call<Cat> caller = RetrofitClient.getInstance().getMyApi().getCatImage();
